@@ -1,0 +1,1617 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Exercices E31 – objections, conclusion et ventes additionnelles</title>
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Syne:wght@600;700;800&family=Inter:wght@300;400;500;600&display=swap');
+/* ── RESET & BASE ─────────────────────────────────────────── */
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+:root {
+  --bg:        #f5f6fa;
+  --surface:   #ffffff;
+  --card:      #ffffff;
+  --border:    #dfe3ec;
+  --border-hi: #b9c0d4;
+  --text:      #1f2433;
+  --text-dim:  #5f677d;
+  --accent:    #e0a400;
+  --green:     #1e9e4a;
+  --red:       #d63a3a;
+  --blue:      #2f7fc4;
+  --purple:    #7a4fbf;
+  --font-head: 'Syne', sans-serif;
+  --font-body: 'Inter', system-ui, sans-serif;
+  --radius:    10px;
+}
+
+
+body {
+  background: var(--bg);
+  color: var(--text);
+  font-family: var(--font-body);
+  font-size: 15px;
+  line-height: 1.7;
+  min-height: 100vh;
+}
+
+/* ── HEADER ──────────────────────────────────────────────── */
+.site-header {
+  background: linear-gradient(135deg, #ffffff 0%, #eef2fb 100%);
+  border-bottom: 1px solid var(--border);
+  padding: 48px 24px 36px;
+  text-align: center;
+}
+.site-header .kicker {
+  display: inline-block;
+  background: var(--accent);
+  color: #0f1117;
+  font-family: var(--font-head);
+  font-size: 10px;
+  font-weight: 800;
+  letter-spacing: 2.5px;
+  text-transform: uppercase;
+  padding: 3px 12px;
+  border-radius: 3px;
+  margin-bottom: 18px;
+}
+.site-header h1 {
+  font-family: var(--font-head);
+  font-size: clamp(22px, 5vw, 38px);
+  font-weight: 800;
+  color: #1a2040;
+  margin-bottom: 8px;
+  line-height: 1.15;
+}
+.site-header .sub {
+  color: var(--text-dim);
+  font-size: 14px;
+  font-weight: 300;
+  max-width: 520px;
+  margin: 0 auto 24px;
+}
+
+/* ── NAV ANCRES ──────────────────────────────────────────── */
+.nav-anchors {
+  display: flex;
+  gap: 10px;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+.nav-anchors a {
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  color: var(--text);
+  font-size: 13px;
+  font-weight: 500;
+  padding: 7px 16px;
+  text-decoration: none;
+  transition: border-color .15s, color .15s;
+}
+.nav-anchors a:hover { border-color: var(--accent); color: var(--accent); }
+
+/* ── CONTENEUR PRINCIPAL ─────────────────────────────────── */
+main {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 40px 20px 80px;
+}
+
+/* ── TITRE DE BLOC ───────────────────────────────────────── */
+.bloc-titre {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  margin: 52px 0 6px;
+  padding-bottom: 14px;
+  border-bottom: 1px solid var(--border);
+}
+.bloc-titre:first-child { margin-top: 0; }
+.bloc-titre .icone {
+  font-size: 26px;
+  flex-shrink: 0;
+}
+.bloc-titre h2 {
+  font-family: var(--font-head);
+  font-size: 20px;
+  font-weight: 800;
+  color: #1a2040;
+}
+
+/* ── MÉMO FORMULE ────────────────────────────────────────── */
+.memo {
+  background: #eefaf1;
+  border: 1px solid #c9e9d2;
+  border-left: 4px solid var(--green);
+  border-radius: var(--radius);
+  padding: 16px 20px;
+  margin-bottom: 24px;
+  font-size: 13.5px;
+  line-height: 1.75;
+}
+.memo .memo-titre {
+  font-family: var(--font-head);
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: var(--green);
+  margin-bottom: 8px;
+}
+.memo code {
+  display: block;
+  background: #e2f4e7;
+  border-radius: 5px;
+  padding: 8px 14px;
+  color: #17703a;
+  font-family: 'Courier New', monospace;
+  font-size: 13px;
+  margin: 4px 0;
+}
+.memo .note {
+  color: var(--text-dim);
+  font-size: 12.5px;
+  margin-top: 6px;
+}
+
+/* ── CARTE EXERCICE ──────────────────────────────────────── */
+.exo-card {
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  margin-bottom: 14px;
+  overflow: hidden;
+  transition: border-color .15s;
+}
+.exo-card:hover { border-color: var(--border-hi); }
+
+.exo-header {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 14px 18px;
+  cursor: pointer;
+  user-select: none;
+  list-style: none;
+}
+.exo-header::-webkit-details-marker { display: none; }
+
+.exo-num {
+  font-family: var(--font-head);
+  font-size: 11px;
+  font-weight: 700;
+  color: var(--text-dim);
+  flex-shrink: 0;
+  min-width: 40px;
+}
+.badge {
+  font-size: 10px;
+  font-weight: 600;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  padding: 2px 9px;
+  border-radius: 3px;
+  flex-shrink: 0;
+}
+.badge-1 { background: #e6f6eb; color: var(--green); border: 1px solid #b8e2c4; }
+.badge-2 { background: #fff6dc; color: #9a6b00; border: 1px solid #f0d98a; }
+.badge-3 { background: #fdeaea; color: var(--red); border: 1px solid #f2bcbc; }
+.badge-exam { background: #f1eafb; color: var(--purple); border: 1px solid #d6c3f0; }
+
+.exo-titre-txt {
+  font-size: 14px;
+  font-weight: 500;
+  color: var(--text);
+  flex: 1;
+}
+.chevron {
+  color: var(--text-dim);
+  font-size: 13px;
+  flex-shrink: 0;
+  transition: transform .2s;
+}
+details[open] .chevron { transform: rotate(180deg); }
+
+/* ── CORPS DE L'EXERCICE ─────────────────────────────────── */
+.exo-body {
+  padding: 0 18px 20px;
+  border-top: 1px solid var(--border);
+}
+
+.contexte {
+  background: #eef4fb;
+  border-left: 3px solid var(--blue);
+  border-radius: 0 6px 6px 0;
+  padding: 14px 18px;
+  margin: 16px 0;
+  font-size: 14px;
+  line-height: 1.75;
+}
+.contexte strong { color: #1a2040; }
+
+.tableau-donnees {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 13px;
+  margin: 12px 0;
+}
+.tableau-donnees th {
+  background: #f0f2f8;
+  color: var(--text-dim);
+  font-family: var(--font-head);
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  padding: 8px 12px;
+  text-align: left;
+  border-bottom: 1px solid var(--border);
+}
+.tableau-donnees td {
+  padding: 8px 12px;
+  border-bottom: 1px solid var(--border);
+  color: var(--text);
+}
+.tableau-donnees tr:last-child td { border-bottom: none; }
+.tableau-donnees td.num { font-weight: 600; color: #1a2040; }
+.tableau-donnees tr.total-row td {
+  background: #f0f2f8;
+  font-family: var(--font-head);
+  font-weight: 700;
+  color: var(--accent);
+}
+
+.questions { margin: 18px 0 0; }
+.question {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 10px;
+  align-items: flex-start;
+}
+.question .q-num {
+  flex-shrink: 0;
+  width: 22px;
+  height: 22px;
+  background: var(--accent);
+  color: #0f1117;
+  font-family: var(--font-head);
+  font-weight: 800;
+  font-size: 11px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 2px;
+}
+.question p { font-size: 14px; margin: 0; }
+
+/* ── ORDRE DE GRANDEUR ───────────────────────────────────── */
+.ordre-grandeur {
+  background: #fff8e1;
+  border: 1px solid #f0d98a;
+  border-radius: 6px;
+  padding: 10px 14px;
+  font-size: 12.5px;
+  color: #7a5a00;
+  margin: 12px 0 0;
+}
+.ordre-grandeur::before { content: "💡 "; }
+
+/* ── BOUTON CORRECTION ───────────────────────────────────── */
+.btn-corrige {
+  background: none;
+  border: 1px solid var(--border-hi);
+  border-radius: 6px;
+  color: var(--text-dim);
+  cursor: pointer;
+  font-family: var(--font-body);
+  font-size: 13px;
+  font-weight: 500;
+  padding: 8px 16px;
+  margin-top: 18px;
+  transition: all .15s;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+.btn-corrige:hover { border-color: var(--green); color: var(--green); }
+
+/* ── CORRECTION ──────────────────────────────────────────── */
+.correction {
+  display: none;
+  background: #eefaf1;
+  border: 1px solid #c9e9d2;
+  border-radius: 6px;
+  padding: 16px 18px;
+  margin-top: 14px;
+  font-size: 13.5px;
+  line-height: 1.8;
+}
+.correction.visible { display: block; }
+.correction .corr-etape {
+  margin-bottom: 10px;
+  padding-bottom: 10px;
+  border-bottom: 1px solid #cfe8d6;
+}
+.correction .corr-etape:last-child { margin-bottom: 0; padding-bottom: 0; border-bottom: none; }
+.correction .c-num {
+  display: inline-block;
+  background: var(--green);
+  color: #ffffff;
+  font-family: var(--font-head);
+  font-weight: 800;
+  font-size: 10px;
+  width: 18px;
+  height: 18px;
+  border-radius: 50%;
+  text-align: center;
+  line-height: 18px;
+  margin-right: 6px;
+}
+.correction code {
+  display: block;
+  background: #e2f4e7;
+  border-radius: 4px;
+  padding: 6px 12px;
+  color: #17703a;
+  font-family: 'Courier New', monospace;
+  font-size: 13px;
+  margin: 5px 0;
+}
+.correction .res {
+  font-family: var(--font-head);
+  font-weight: 700;
+  color: #1a2040;
+}
+.correction .conclu {
+  margin-top: 8px;
+  font-size: 13px;
+  color: #2f6b44;
+  font-style: italic;
+}
+.correction .tableau-corr {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 12.5px;
+  margin: 8px 0;
+}
+.correction .tableau-corr th {
+  background: #e2f4e7;
+  color: var(--text-dim);
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  padding: 6px 10px;
+  text-align: left;
+}
+.correction .tableau-corr td {
+  padding: 6px 10px;
+  border-bottom: 1px solid #cfe8d6;
+  color: #2b4a35;
+}
+.correction .tableau-corr td.val {
+  font-weight: 700;
+  color: var(--green);
+}
+.correction .tableau-corr tr.t-total td {
+  background: #e2f4e7;
+  font-weight: 700;
+  color: var(--accent);
+}
+
+/* ── SÉPARATEUR ──────────────────────────────────────────── */
+hr.section-sep {
+  border: none;
+  border-top: 1px solid var(--border);
+  margin: 54px 0 0;
+}
+
+/* ── FOOTER ──────────────────────────────────────────────── */
+.site-footer {
+  border-top: 1px solid var(--border);
+  padding: 28px 20px;
+  text-align: center;
+  color: var(--text-dim);
+  font-size: 12px;
+}
+
+/* ── RESPONSIVE ──────────────────────────────────────────── */
+@media (max-width: 520px) {
+  .exo-titre-txt { font-size: 13px; }
+  .contexte { font-size: 13px; }
+  .tableau-donnees { font-size: 12px; }
+}
+</style>
+</head>
+<body>
+
+<!-- ══ HEADER ══════════════════════════════════════════════ -->
+<header class="site-header">
+  <div class="kicker">🛍️ Exercices E31 – Bac pro MCV</div>
+  <h1>Répondre aux objections,<br>conclure la vente et proposer<br>des ventes additionnelles</h1>
+  <p class="sub">17 exercices progressifs – de l'identification des objections au cas de synthèse complet</p>
+  <nav class="nav-anchors">
+    <a href="#objections">🛡️ Objections et réfutation (6 ex.)</a>
+    <a href="#conclusion">🟢 Signaux d'achat et conclusion (4 ex.)</a>
+    <a href="#additionnelle">🛒 Vente additionnelle et omnicanal (5 ex.)</a>
+    <a href="#synthese">🏁 Cas de synthèse (2 ex.)</a>
+  </nav>
+</header>
+
+<main>
+
+<!-- ══════════════════════════════════════════════════════════
+     BLOC 1 – OBJECTIONS ET RÉFUTATION
+══════════════════════════════════════════════════════════ -->
+<div class="bloc-titre" id="objections">
+  <span class="icone">🛡️</span>
+  <h2>Bloc 1 – identifier les objections et les réfuter</h2>
+</div>
+
+<div class="memo">
+  <div class="memo-titre">🗂 mémo notions</div>
+  <p>L'<strong>objection</strong> est une réaction du client face à un argument du vendeur. Elle signale un frein à l'achat, mais aussi un intérêt pour le produit.</p>
+  <code>Objection sincère = frein réel et précis (prix, taille, délai, usage…)</code>
+  <code>Objection prétexte = réponse vague pour éviter d'acheter (« je vais réfléchir »)</code>
+  <p style="margin-top:10px"><strong>Les 6 techniques de réfutation :</strong></p>
+  <code>Valorisation – accepter la remarque et apporter un argument (« oui, mais… »)</code>
+  <code>Témoignage – s'appuyer sur l'expérience d'un autre client ou du vendeur</code>
+  <code>Reformulation interrogative – reformuler l'objection sous forme de question</code>
+  <code>Anticipation – devancer l'objection avant que le client ne la formule</code>
+  <code>Affaiblissement – diminuer l'importance de l'objection</code>
+  <code>Écran – montrer qu'on a compris et différer la réponse</code>
+  <p style="margin-top:10px"><strong>Les 4 techniques de réponse à l'objection prix :</strong></p>
+  <code>Addition – citer tous les avantages offerts par le produit</code>
+  <code>Soustraction – montrer les avantages perdus si le client n'achète pas</code>
+  <code>Multiplication – développer les avantages sur la durée d'utilisation</code>
+  <code>Division – ramener le prix à une durée ou à une utilisation (par mois, par sortie…)</code>
+  <p class="note">Face à une objection prétexte, on pose des questions d'approfondissement pour faire apparaître le vrai frein.</p>
+</div>
+
+<!-- EX 1 -->
+<details class="exo-card">
+  <summary class="exo-header">
+    <span class="exo-num">Ex. 1</span>
+    <span class="badge badge-1">⬆ décollage</span>
+    <span class="exo-titre-txt">Objection sincère ou objection prétexte ?</span>
+    <span class="chevron">▼</span>
+  </summary>
+  <div class="exo-body">
+    <div class="contexte">
+      Vous êtes vendeur(se) chez <strong>SportAvenue</strong>, grande surface spécialisée dans les articles de sport. Au cours de la journée, vous relevez les phrases suivantes prononcées par des clients :
+    </div>
+    <table class="tableau-donnees">
+      <thead><tr><th>N°</th><th>Phrase du client</th></tr></thead>
+      <tbody>
+        <tr><td class="num">1</td><td>« Je pars en randonnée samedi, je ne peux pas attendre une livraison de 5 jours. »</td></tr>
+        <tr><td class="num">2</td><td>« Je regarde juste, merci. »</td></tr>
+        <tr><td class="num">3</td><td>« Ces chaussures sont trop étroites, j'ai le pied large. »</td></tr>
+        <tr><td class="num">4</td><td>« Je n'ai pas le temps aujourd'hui, je repasserai avec ma sœur, elle me conseillera. »</td></tr>
+        <tr><td class="num">5</td><td>« J'ai peur que cette taille ne convienne pas à mon fils. »</td></tr>
+        <tr><td class="num">6</td><td>« Je vais réfléchir. »</td></tr>
+        <tr><td class="num">7</td><td>« Dommage que ce sac n'existe pas en bleu. »</td></tr>
+      </tbody>
+    </table>
+    <div class="questions">
+      <div class="question">
+        <span class="q-num">1</span>
+        <p>Classez chaque phrase en objection sincère ou en objection prétexte.</p>
+      </div>
+      <div class="question">
+        <span class="q-num">2</span>
+        <p>Expliquez à quoi on reconnaît une objection prétexte.</p>
+      </div>
+    </div>
+    <div class="ordre-grandeur"><strong>Indice :</strong> demandez-vous si le client donne une raison précise, que le vendeur peut traiter (taille, délai, couleur), ou s'il reste vague.</div>
+    <button class="btn-corrige" onclick="toggleCorr(this)">✅ Voir la correction</button>
+    <div class="correction">
+      <div class="corr-etape">
+        <span class="c-num">1</span>
+        <table class="tableau-corr">
+          <thead><tr><th>N°</th><th>Type</th><th>Pourquoi</th></tr></thead>
+          <tbody>
+            <tr><td>1</td><td class="val">Sincère</td><td>contrainte de délai réelle et datée</td></tr>
+            <tr><td>2</td><td class="val">Prétexte</td><td>formule vague pour éviter l'échange</td></tr>
+            <tr><td>3</td><td class="val">Sincère</td><td>problème de confort précis</td></tr>
+            <tr><td>4</td><td class="val">Prétexte</td><td>report de la décision sans motif lié au produit</td></tr>
+            <tr><td>5</td><td class="val">Sincère</td><td>crainte précise sur la taille</td></tr>
+            <tr><td>6</td><td class="val">Prétexte</td><td>aucun frein exprimé</td></tr>
+            <tr><td>7</td><td class="val">Sincère</td><td>attente précise sur la couleur</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <div class="corr-etape">
+        <span class="c-num">2</span>
+        <p class="res">L'objection prétexte est vague, ne porte pas sur une caractéristique du produit et traduit la volonté de ne pas acheter (ou de reporter l'achat).</p>
+        <p class="conclu">Le vendeur ne la traite pas directement : il pose des questions d'approfondissement pour faire apparaître le vrai frein, qui deviendra une objection sincère à traiter.</p>
+      </div>
+    </div>
+  </div>
+</details>
+
+<!-- EX 2 -->
+<details class="exo-card">
+  <summary class="exo-header">
+    <span class="exo-num">Ex. 2</span>
+    <span class="badge badge-1">⬆ décollage</span>
+    <span class="exo-titre-txt">Nommer les techniques de réfutation</span>
+    <span class="chevron">▼</span>
+  </summary>
+  <div class="exo-body">
+    <div class="contexte">
+      Votre tuteur vous demande de vérifier que vous connaissez les techniques de réfutation avant votre première journée seul(e) en rayon. Pour chaque description, retrouvez le nom de la technique.
+    </div>
+    <table class="tableau-donnees">
+      <thead><tr><th>Lettre</th><th>Ce que fait le vendeur</th></tr></thead>
+      <tbody>
+        <tr><td class="num">a</td><td>Il indique qu'il a compris l'objection et qu'il y répondra un peu plus tard.</td></tr>
+        <tr><td class="num">b</td><td>Il cite l'avis d'un autre client satisfait.</td></tr>
+        <tr><td class="num">c</td><td>Il reconnaît que le client a raison sur un point, puis apporte un argument plus fort.</td></tr>
+        <tr><td class="num">d</td><td>Il répète l'objection du client sous forme de question.</td></tr>
+        <tr><td class="num">e</td><td>Il répond à l'objection avant même que le client l'ait formulée.</td></tr>
+        <tr><td class="num">f</td><td>Il réduit l'importance de l'objection en la présentant comme un détail.</td></tr>
+      </tbody>
+    </table>
+    <div class="questions">
+      <div class="question">
+        <span class="q-num">1</span>
+        <p>Associez chaque lettre à l'une des six techniques de réfutation.</p>
+      </div>
+      <div class="question">
+        <span class="q-num">2</span>
+        <p>Quelle technique permet de vérifier que l'on a bien compris l'objection avant d'y répondre ?</p>
+      </div>
+    </div>
+    <div class="ordre-grandeur"><strong>Indice :</strong> les six techniques sont listées dans le mémo du bloc. Chacune n'est utilisée qu'une seule fois.</div>
+    <button class="btn-corrige" onclick="toggleCorr(this)">✅ Voir la correction</button>
+    <div class="correction">
+      <div class="corr-etape">
+        <span class="c-num">1</span>
+        <table class="tableau-corr">
+          <thead><tr><th>Lettre</th><th>Technique</th></tr></thead>
+          <tbody>
+            <tr><td>a</td><td class="val">Écran</td></tr>
+            <tr><td>b</td><td class="val">Témoignage</td></tr>
+            <tr><td>c</td><td class="val">Valorisation</td></tr>
+            <tr><td>d</td><td class="val">Reformulation interrogative</td></tr>
+            <tr><td>e</td><td class="val">Anticipation</td></tr>
+            <tr><td>f</td><td class="val">Affaiblissement</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <div class="corr-etape">
+        <span class="c-num">2</span>
+        <p class="res">La reformulation interrogative.</p>
+        <p class="conclu">En reformulant sous forme de question, le vendeur fait préciser l'objection au client et évite de répondre à côté.</p>
+      </div>
+    </div>
+  </div>
+</details>
+
+<!-- EX 3 -->
+<details class="exo-card">
+  <summary class="exo-header">
+    <span class="exo-num">Ex. 3</span>
+    <span class="badge badge-2">⬆⬆ intermédiaire</span>
+    <span class="exo-titre-txt">Identifier la technique dans la réponse du vendeur</span>
+    <span class="chevron">▼</span>
+  </summary>
+  <div class="exo-body">
+    <div class="contexte">
+      Au rayon running de <strong>SportAvenue</strong>, vous observez votre collègue Inès pendant une après-midi. Voici six de ses réponses aux clients.
+    </div>
+    <table class="tableau-donnees">
+      <thead><tr><th>N°</th><th>Objection ou situation</th><th>Réponse d'Inès</th></tr></thead>
+      <tbody>
+        <tr><td class="num">1</td><td>« Ce modèle est lourd. »</td><td>« Vous trouvez qu'il est trop lourd pour courir longtemps, c'est bien cela ? »</td></tr>
+        <tr><td class="num">2</td><td>« Elles sont plus chères que les autres. »</td><td>« Oui, elles sont un peu plus chères, mais leur semelle amortissante dure deux fois plus longtemps. »</td></tr>
+        <tr><td class="num">3</td><td>« Je ne suis pas sûr qu'elles tiennent sur un marathon. »</td><td>« Une cliente les a portées sur le marathon de Paris le mois dernier, elle est revenue en acheter une deuxième paire. »</td></tr>
+        <tr><td class="num">4</td><td>Le client regarde la matière du tee-shirt.</td><td>« Vous vous demandez sans doute s'il sèche vite : oui, il est sec en moins d'une heure. »</td></tr>
+        <tr><td class="num">5</td><td>« La fermeture est un peu dure. »</td><td>« Elle s'assouplit après deux ou trois utilisations, c'est un détail par rapport à l'étanchéité de la veste. »</td></tr>
+        <tr><td class="num">6</td><td>« Et elles se lavent en machine ? » (au début de la présentation)</td><td>« Bonne question, j'y reviens juste après vous avoir montré le système de laçage. »</td></tr>
+      </tbody>
+    </table>
+    <div class="questions">
+      <div class="question">
+        <span class="q-num">1</span>
+        <p>Nommez la technique de réfutation utilisée par Inès dans chaque réponse.</p>
+      </div>
+      <div class="question">
+        <span class="q-num">2</span>
+        <p>Dans la réponse 2, relevez le mot qui marque le passage de l'acceptation à l'argument.</p>
+      </div>
+    </div>
+    <div class="ordre-grandeur"><strong>Indice :</strong> repérez les marqueurs : une question (« c'est bien cela ? »), un autre client, « oui, mais », « sans doute », « c'est un détail », « j'y reviens ».</div>
+    <button class="btn-corrige" onclick="toggleCorr(this)">✅ Voir la correction</button>
+    <div class="correction">
+      <div class="corr-etape">
+        <span class="c-num">1</span>
+        <table class="tableau-corr">
+          <thead><tr><th>N°</th><th>Technique</th><th>Marqueur</th></tr></thead>
+          <tbody>
+            <tr><td>1</td><td class="val">Reformulation interrogative</td><td>« c'est bien cela ? »</td></tr>
+            <tr><td>2</td><td class="val">Valorisation</td><td>« oui… mais »</td></tr>
+            <tr><td>3</td><td class="val">Témoignage</td><td>expérience d'une autre cliente</td></tr>
+            <tr><td>4</td><td class="val">Anticipation</td><td>le client n'a encore rien dit</td></tr>
+            <tr><td>5</td><td class="val">Affaiblissement</td><td>« c'est un détail »</td></tr>
+            <tr><td>6</td><td class="val">Écran</td><td>« j'y reviens juste après »</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <div class="corr-etape">
+        <span class="c-num">2</span>
+        <p class="res">Le mot « mais ».</p>
+        <p class="conclu">Avec la valorisation, le vendeur ne contredit pas le client : il lui donne raison (« oui ») puis transforme le point faible en avantage (« mais »).</p>
+      </div>
+    </div>
+  </div>
+</details>
+
+<!-- EX 4 -->
+<details class="exo-card">
+  <summary class="exo-header">
+    <span class="exo-num">Ex. 4</span>
+    <span class="badge badge-2">⬆⬆ intermédiaire</span>
+    <span class="exo-titre-txt">Les quatre techniques de l'objection prix</span>
+    <span class="chevron">▼</span>
+  </summary>
+  <div class="exo-body">
+    <div class="contexte">
+      Un client hésite devant une montre GPS de sport vendue <strong>129 € TTC</strong> : « 129 €, c'est cher pour une montre ! ». Quatre vendeurs de l'équipe lui répondent chacun à leur manière.
+    </div>
+    <table class="tableau-donnees">
+      <thead><tr><th>Vendeur</th><th>Réponse</th></tr></thead>
+      <tbody>
+        <tr><td class="num">A</td><td>« Pour ce prix, vous avez le GPS, le cardio au poignet, 14 jours d'autonomie et l'application de suivi gratuite. »</td></tr>
+        <tr><td class="num">B</td><td>« Sur un an, cela représente 10,75 € par mois. »</td></tr>
+        <tr><td class="num">C</td><td>« Vous l'utiliserez pendant plusieurs saisons, pour la course, le vélo et la natation. »</td></tr>
+        <tr><td class="num">D</td><td>« Sans montre GPS, vous ne connaîtrez ni votre allure ni votre distance, et l'offre se termine samedi. »</td></tr>
+      </tbody>
+    </table>
+    <div class="questions">
+      <div class="question">
+        <span class="q-num">1</span>
+        <p>Nommez la technique de réponse à l'objection prix utilisée par chaque vendeur.</p>
+      </div>
+      <div class="question">
+        <span class="q-num">2</span>
+        <p>Vérifiez par le calcul le montant annoncé par le vendeur B.</p>
+      </div>
+      <div class="question">
+        <span class="q-num">3</span>
+        <p>Expliquez pourquoi il est conseillé de ne pas annoncer le prix trop tôt dans l'entretien.</p>
+      </div>
+    </div>
+    <div class="ordre-grandeur"><strong>Ordre de grandeur :</strong> 129 € divisés par 12 mois, c'est un peu plus de 10 € par mois.</div>
+    <button class="btn-corrige" onclick="toggleCorr(this)">✅ Voir la correction</button>
+    <div class="correction">
+      <div class="corr-etape">
+        <span class="c-num">1</span>
+        <table class="tableau-corr">
+          <thead><tr><th>Vendeur</th><th>Technique</th><th>Justification</th></tr></thead>
+          <tbody>
+            <tr><td>A</td><td class="val">Addition</td><td>cumul de tous les avantages</td></tr>
+            <tr><td>B</td><td class="val">Division</td><td>prix ramené à une durée</td></tr>
+            <tr><td>C</td><td class="val">Multiplication</td><td>avantages développés sur la durée d'utilisation</td></tr>
+            <tr><td>D</td><td class="val">Soustraction</td><td>avantages perdus si le client n'achète pas</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <div class="corr-etape">
+        <span class="c-num">2</span>
+        <code>129 ÷ 12 = 10,75 €</code>
+        <p class="res">Le montant annoncé est juste : <strong>10,75 € par mois</strong>.</p>
+      </div>
+      <div class="corr-etape">
+        <span class="c-num">3</span>
+        <p class="res">Le vendeur doit d'abord montrer la valeur du produit (caractéristiques, avantages adaptés aux besoins).</p>
+        <p class="conclu">Annoncé trop tôt, le prix est jugé seul et paraît élevé. Annoncé après l'argumentation, il est comparé aux avantages présentés.</p>
+      </div>
+    </div>
+  </div>
+</details>
+
+<!-- EX 5 -->
+<details class="exo-card">
+  <summary class="exo-header">
+    <span class="exo-num">Ex. 5</span>
+    <span class="badge badge-2">⬆⬆ intermédiaire</span>
+    <span class="exo-titre-txt">Préparer une réponse par la technique de la division</span>
+    <span class="chevron">▼</span>
+  </summary>
+  <div class="exo-body">
+    <div class="contexte">
+      Une cliente s'intéresse à un vélo à assistance électrique vendu <strong>1 440 € TTC</strong>. Elle prévoit de l'utiliser <strong>2 fois par semaine</strong>, <strong>52 semaines par an</strong>, pendant au moins <strong>3 ans</strong>. Elle déclare : « 1 440 €, c'est une grosse somme. »
+    </div>
+    <div class="questions">
+      <div class="question">
+        <span class="q-num">1</span>
+        <p>Calculez le coût du vélo ramené à un mois sur 1 an, puis sur 2 ans.</p>
+      </div>
+      <div class="question">
+        <span class="q-num">2</span>
+        <p>Calculez le nombre de sorties sur 3 ans, puis le coût par sortie (arrondi au centime).</p>
+      </div>
+      <div class="question">
+        <span class="q-num">3</span>
+        <p>Rédigez la phrase que vous adresseriez à la cliente en utilisant le résultat le plus convaincant.</p>
+      </div>
+    </div>
+    <div class="ordre-grandeur"><strong>Ordre de grandeur :</strong> environ 100 sorties par an, donc environ 300 sorties en 3 ans. Le coût par sortie doit être inférieur à 5 €.</div>
+    <button class="btn-corrige" onclick="toggleCorr(this)">✅ Voir la correction</button>
+    <div class="correction">
+      <div class="corr-etape">
+        <span class="c-num">1</span>
+        <code>Sur 1 an : 1 440 ÷ 12 = 120 € par mois</code>
+        <code>Sur 2 ans : 1 440 ÷ 24 = 60 € par mois</code>
+        <p class="res">Coût mensuel : <strong>120 €</strong> sur 1 an, <strong>60 €</strong> sur 2 ans.</p>
+      </div>
+      <div class="corr-etape">
+        <span class="c-num">2</span>
+        <code>Sorties : 2 × 52 × 3 = 312 sorties</code>
+        <code>Coût par sortie : 1 440 ÷ 312 = 4,615… ≈ 4,62 €</code>
+        <p class="res">Coût par sortie : <strong>4,62 €</strong>.</p>
+      </div>
+      <div class="corr-etape">
+        <span class="c-num">3</span>
+        <p class="res">« Je comprends. Vous m'avez dit l'utiliser deux fois par semaine : sur trois ans, cela revient à moins de 5 € par sortie, moins cher qu'un aller-retour en transport en commun. »</p>
+        <p class="conclu">Le coût par sortie est le plus parlant, car il est rattaché à l'usage réel de la cliente. La division ne signifie pas un paiement en plusieurs fois : c'est une manière de présenter le prix.</p>
+      </div>
+    </div>
+  </div>
+</details>
+
+<!-- EX 6 -->
+<details class="exo-card">
+  <summary class="exo-header">
+    <span class="exo-num">Ex. 6</span>
+    <span class="badge badge-3">⬆⬆⬆ niveau examen</span>
+    <span class="exo-titre-txt">Rédiger une réfutation avec une technique imposée</span>
+    <span class="chevron">▼</span>
+  </summary>
+  <div class="exo-body">
+    <div class="contexte">
+      Au rayon camping-randonnée de <strong>SportAvenue</strong>, votre responsable vous demande de préparer, par écrit, des réponses types aux objections les plus fréquentes, pour les afficher dans la réserve.
+    </div>
+    <table class="tableau-donnees">
+      <thead><tr><th>N°</th><th>Objection du client</th><th>Technique imposée</th></tr></thead>
+      <tbody>
+        <tr><td class="num">1</td><td>« Ce sac à dos de 40 litres est trop grand pour moi. »</td><td>Reformulation interrogative</td></tr>
+        <tr><td class="num">2</td><td>« Cette tente est chère. »</td><td>Valorisation</td></tr>
+        <tr><td class="num">3</td><td>« Je ne suis pas sûr que ces bâtons de marche soient solides. »</td><td>Témoignage</td></tr>
+        <tr><td class="num">4</td><td>« 90 € pour une doudoune, c'est beaucoup. » (usage prévu : 3 hivers)</td><td>Division</td></tr>
+        <tr><td class="num">5</td><td>« Et la garantie ? » (pendant la démonstration du réchaud)</td><td>Écran</td></tr>
+      </tbody>
+    </table>
+    <div class="questions">
+      <div class="question">
+        <span class="q-num">1</span>
+        <p>Rédigez, pour chaque objection, la réponse du vendeur en respectant la technique imposée.</p>
+      </div>
+      <div class="question">
+        <span class="q-num">2</span>
+        <p>Pour l'objection 1, indiquez ce que le vendeur doit faire après la réponse du client.</p>
+      </div>
+    </div>
+    <div class="ordre-grandeur"><strong>Indice :</strong> une réfutation commence souvent par une marque de compréhension (« je comprends », « en effet ») et ne contredit jamais frontalement le client.</div>
+    <button class="btn-corrige" onclick="toggleCorr(this)">✅ Voir la correction</button>
+    <div class="correction">
+      <div class="corr-etape">
+        <span class="c-num">1</span>
+        <table class="tableau-corr">
+          <thead><tr><th>N°</th><th>Exemple de réponse</th></tr></thead>
+          <tbody>
+            <tr><td>1</td><td>« Vous pensez qu'un sac de 40 litres sera trop encombrant pour vos sorties, c'est bien cela ? »</td></tr>
+            <tr><td>2</td><td>« En effet, elle est dans le haut de la gamme, mais elle se monte en cinq minutes et résiste aux vents forts. »</td></tr>
+            <tr><td>3</td><td>« Un groupe de randonneurs les a utilisés tout l'été sur le GR20 et ils sont revenus nous en racheter. »</td></tr>
+            <tr><td>4</td><td>« Je comprends. Sur trois hivers, cela revient à 30 € par saison pour avoir chaud. » <em>(90 ÷ 3 = 30 €)</em></td></tr>
+            <tr><td>5</td><td>« C'est un point important, je vous en parle juste après la démonstration. »</td></tr>
+          </tbody>
+        </table>
+        <p class="conclu">Toute formulation qui respecte le principe de la technique et reste courtoise est acceptée.</p>
+      </div>
+      <div class="corr-etape">
+        <span class="c-num">2</span>
+        <p class="res">Écouter la réponse du client, puis répondre au frein réel ainsi précisé, par exemple en présentant un sac de 30 litres ou en montrant les sangles de compression du sac de 40 litres.</p>
+        <p class="conclu">La reformulation interrogative ne règle pas l'objection : elle permet de la préciser pour proposer ensuite la bonne solution.</p>
+      </div>
+    </div>
+  </div>
+</details>
+
+<hr class="section-sep">
+
+<!-- ══════════════════════════════════════════════════════════
+     BLOC 2 – SIGNAUX D'ACHAT ET CONCLUSION
+══════════════════════════════════════════════════════════ -->
+<div class="bloc-titre" id="conclusion">
+  <span class="icone">🟢</span>
+  <h2>Bloc 2 – repérer les signaux d'achat et conclure la vente</h2>
+</div>
+
+<div class="memo">
+  <div class="memo-titre">🗂 mémo notions</div>
+  <p>Une fois les objections levées, le vendeur repère les <strong>signaux d'achat</strong> (ou « feux verts ») qui montrent que le client est prêt à acheter.</p>
+  <code>Signal verbal = ce que dit le client</code>
+  <code>Signal non verbal = gestes, mimiques, attitude (sourire, garder le produit en main…)</code>
+  <p class="note">Le client peut : demander un avantage supplémentaire, adopter une attitude de propriétaire, s'assurer d'une garantie, poser une question sur un point de détail.</p>
+  <p style="margin-top:10px"><strong>Les 6 techniques de conclusion :</strong></p>
+  <code>Alternative (« ou ») – proposer un choix entre deux possibilités qui mènent toutes deux à l'achat</code>
+  <code>Anticipation (« peau de l'ours ») – agir comme si la décision était déjà prise</code>
+  <code>Bilan (« bobine ») – récapituler les avantages qui correspondent aux besoins</code>
+  <code>Décision immédiate (« regret ») – montrer ce que le client perd s'il attend</code>
+  <code>Argument choc (« crochet ») – rebondir sur une question du client avec un argument fort</code>
+  <code>Conclusion directe – proposer clairement de finaliser l'achat</code>
+</div>
+
+<!-- EX 7 -->
+<details class="exo-card">
+  <summary class="exo-header">
+    <span class="exo-num">Ex. 7</span>
+    <span class="badge badge-1">⬆ décollage</span>
+    <span class="exo-titre-txt">Signaux d'achat verbaux et non verbaux</span>
+    <span class="chevron">▼</span>
+  </summary>
+  <div class="exo-body">
+    <div class="contexte">
+      Vous travaillez au rayon textile de <strong>SportAvenue</strong>. Vous relevez les comportements suivants chez vos clients.
+    </div>
+    <table class="tableau-donnees">
+      <thead><tr><th>N°</th><th>Situation</th></tr></thead>
+      <tbody>
+        <tr><td class="num">1</td><td>« Si je la prends aujourd'hui, vous me faites un geste sur les chaussettes ? »</td></tr>
+        <tr><td class="num">2</td><td>La cliente enfile la veste, ferme la fermeture et tourne devant le miroir en souriant.</td></tr>
+        <tr><td class="num">3</td><td>« Si la taille ne va pas à mon fils, je pourrai l'échanger ? »</td></tr>
+        <tr><td class="num">4</td><td>« Le sac se lave en machine ? »</td></tr>
+        <tr><td class="num">5</td><td>Le client garde les chaussures aux pieds et fait quelques pas dans l'allée.</td></tr>
+        <tr><td class="num">6</td><td>« Elle ira très bien avec mon pantalon noir. »</td></tr>
+      </tbody>
+    </table>
+    <div class="questions">
+      <div class="question">
+        <span class="q-num">1</span>
+        <p>Indiquez si chaque signal d'achat est verbal ou non verbal.</p>
+      </div>
+      <div class="question">
+        <span class="q-num">2</span>
+        <p>Précisez ce que révèle chaque signal (avantage supplémentaire, attitude de propriétaire, garantie, point de détail).</p>
+      </div>
+    </div>
+    <div class="ordre-grandeur"><strong>Indice :</strong> le client qui parle du produit comme s'il lui appartenait déjà adopte une attitude de propriétaire.</div>
+    <button class="btn-corrige" onclick="toggleCorr(this)">✅ Voir la correction</button>
+    <div class="correction">
+      <div class="corr-etape">
+        <span class="c-num">1</span>
+        <table class="tableau-corr">
+          <thead><tr><th>N°</th><th>Type</th><th>Ce que révèle le signal</th></tr></thead>
+          <tbody>
+            <tr><td>1</td><td class="val">Verbal</td><td>demande un avantage supplémentaire</td></tr>
+            <tr><td>2</td><td class="val">Non verbal</td><td>attitude de propriétaire</td></tr>
+            <tr><td>3</td><td class="val">Verbal</td><td>s'assure d'une garantie</td></tr>
+            <tr><td>4</td><td class="val">Verbal</td><td>question sur un point de détail</td></tr>
+            <tr><td>5</td><td class="val">Non verbal</td><td>attitude de propriétaire</td></tr>
+            <tr><td>6</td><td class="val">Verbal</td><td>attitude de propriétaire</td></tr>
+          </tbody>
+        </table>
+        <p class="conclu">Dès qu'un feu vert apparaît, le vendeur arrête d'argumenter et passe à la conclusion.</p>
+      </div>
+    </div>
+  </div>
+</details>
+
+<!-- EX 8 -->
+<details class="exo-card">
+  <summary class="exo-header">
+    <span class="exo-num">Ex. 8</span>
+    <span class="badge badge-1">⬆ décollage</span>
+    <span class="exo-titre-txt">Reconnaître les techniques de conclusion</span>
+    <span class="chevron">▼</span>
+  </summary>
+  <div class="exo-body">
+    <div class="contexte">
+      Au rayon ski de <strong>SportAvenue</strong>, vous relevez les phrases prononcées par les vendeurs au moment de conclure.
+    </div>
+    <table class="tableau-donnees">
+      <thead><tr><th>Lettre</th><th>Situation et phrase du vendeur</th></tr></thead>
+      <tbody>
+        <tr><td class="num">a</td><td>La cliente hésite entre deux pointures : « Je vous prépare le 38 ou le 39 ? »</td></tr>
+        <tr><td class="num">b</td><td>Le client se dit très à l'aise dans les après-ski : « Parfait, je vous les dépose en caisse. »</td></tr>
+        <tr><td class="num">c</td><td>Le client trouve le pantalon un peu long : « Pas de souci, je vous marque l'ourlet, il sera prêt dans dix minutes. »</td></tr>
+        <tr><td class="num">d</td><td>La cliente hésite avec un autre modèle : « Récapitulons : imperméable, respirant, avec capuche amovible, et dans votre budget. »</td></tr>
+        <tr><td class="num">e</td><td>Le client veut réfléchir : « C'est la dernière paire à votre pointure et la remise s'arrête ce soir. »</td></tr>
+        <tr><td class="num">f</td><td>Le client demande : « Elle est vraiment chaude ? » – « Elle tient jusqu'à – 20 °C, c'est le modèle des moniteurs de l'école de ski. »</td></tr>
+      </tbody>
+    </table>
+    <div class="questions">
+      <div class="question">
+        <span class="q-num">1</span>
+        <p>Nommez la technique de conclusion utilisée dans chaque situation (nom et image associée).</p>
+      </div>
+      <div class="question">
+        <span class="q-num">2</span>
+        <p>Pourquoi la technique de l'alternative facilite-t-elle la décision du client ?</p>
+      </div>
+    </div>
+    <div class="ordre-grandeur"><strong>Indice :</strong> six situations, six techniques différentes. Aidez-vous des images : « ou », « peau de l'ours », « bobine », « regret », « crochet ».</div>
+    <button class="btn-corrige" onclick="toggleCorr(this)">✅ Voir la correction</button>
+    <div class="correction">
+      <div class="corr-etape">
+        <span class="c-num">1</span>
+        <table class="tableau-corr">
+          <thead><tr><th>Lettre</th><th>Technique</th></tr></thead>
+          <tbody>
+            <tr><td>a</td><td class="val">Alternative – « ou »</td></tr>
+            <tr><td>b</td><td class="val">Conclusion directe</td></tr>
+            <tr><td>c</td><td class="val">Anticipation – « peau de l'ours »</td></tr>
+            <tr><td>d</td><td class="val">Bilan – « bobine »</td></tr>
+            <tr><td>e</td><td class="val">Décision immédiate – « regret »</td></tr>
+            <tr><td>f</td><td class="val">Argument choc – « crochet »</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <div class="corr-etape">
+        <span class="c-num">2</span>
+        <p class="res">Le client ne choisit plus entre acheter et ne pas acheter, mais entre deux options qui mènent toutes les deux à l'achat.</p>
+        <p class="conclu">La décision devient plus simple et moins engageante pour le client.</p>
+      </div>
+    </div>
+  </div>
+</details>
+
+<!-- EX 9 -->
+<details class="exo-card">
+  <summary class="exo-header">
+    <span class="exo-num">Ex. 9</span>
+    <span class="badge badge-2">⬆⬆ intermédiaire</span>
+    <span class="exo-titre-txt">Corriger un vendeur qui ne voit pas les feux verts</span>
+    <span class="chevron">▼</span>
+  </summary>
+  <div class="exo-body">
+    <div class="contexte">
+      Un nouveau vendeur du rayon enfant laisse partir des clients prêts à acheter. Voici quatre échanges relevés par votre responsable.
+    </div>
+    <table class="tableau-donnees">
+      <thead><tr><th>N°</th><th>Client</th><th>Vendeur</th><th>Technique à utiliser</th></tr></thead>
+      <tbody>
+        <tr><td class="num">1</td><td>(essaie un coupe-vent bleu) « Vous l'avez aussi en noir ? »</td><td>« Je crois, il faudrait que je regarde. »</td><td>Alternative</td></tr>
+        <tr><td class="num">2</td><td>« Mon fils va adorer cette montre. »</td><td>« Peut-être. »</td><td>Conclusion directe</td></tr>
+        <tr><td class="num">3</td><td>« Je pourrai la rapporter si elle ne lui va pas ? »</td><td>« Il faut voir ça avec la caisse. »</td><td>Argument choc</td></tr>
+        <tr><td class="num">4</td><td>« Je ne sais pas, je vais peut-être réfléchir… »</td><td>« D'accord, prenez votre temps. »</td><td>Décision immédiate</td></tr>
+      </tbody>
+    </table>
+    <div class="questions">
+      <div class="question">
+        <span class="q-num">1</span>
+        <p>Indiquez si l'attitude du vendeur est positive (+) ou négative (–) dans chaque échange.</p>
+      </div>
+      <div class="question">
+        <span class="q-num">2</span>
+        <p>Identifiez le feu vert ou l'objection émis par le client.</p>
+      </div>
+      <div class="question">
+        <span class="q-num">3</span>
+        <p>Reformulez la réponse du vendeur avec la technique de conclusion indiquée.</p>
+      </div>
+    </div>
+    <div class="ordre-grandeur"><strong>Indice :</strong> une réponse vague (« je crois », « peut-être ») ou qui renvoie le client vers un autre service est une attitude négative.</div>
+    <button class="btn-corrige" onclick="toggleCorr(this)">✅ Voir la correction</button>
+    <div class="correction">
+      <div class="corr-etape">
+        <span class="c-num">1</span>
+        <table class="tableau-corr">
+          <thead><tr><th>N°</th><th>Attitude</th><th>Feu vert / objection</th><th>Reformulation possible</th></tr></thead>
+          <tbody>
+            <tr><td>1</td><td class="val">–</td><td>question sur un point de détail (coloris)</td><td>« Je vous l'apporte tout de suite : vous préférez le bleu ou le noir ? »</td></tr>
+            <tr><td>2</td><td class="val">–</td><td>attitude de propriétaire</td><td>« Je vous fais un paquet cadeau ? »</td></tr>
+            <tr><td>3</td><td class="val">–</td><td>s'assure d'une garantie</td><td>« Bien sûr : vous avez 30 jours pour l'échanger, sur simple présentation du ticket. »</td></tr>
+            <tr><td>4</td><td class="val">–</td><td>objection prétexte</td><td>« C'est la dernière à cette taille et la promotion se termine dimanche. »</td></tr>
+          </tbody>
+        </table>
+        <p class="conclu">Dans les quatre cas, le vendeur laisse passer le moment de conclure. Une réponse précise et rassurante transforme le feu vert en achat.</p>
+      </div>
+    </div>
+  </div>
+</details>
+
+<!-- EX 10 -->
+<details class="exo-card">
+  <summary class="exo-header">
+    <span class="exo-num">Ex. 10</span>
+    <span class="badge badge-3">⬆⬆⬆ niveau examen</span>
+    <span class="exo-titre-txt">De l'objection à la conclusion – analyse d'un échange</span>
+    <span class="chevron">▼</span>
+  </summary>
+  <div class="exo-body">
+    <div class="contexte">
+      Au rayon ski de <strong>SportAvenue</strong>, une cliente cherche un casque.<br><br>
+      <strong>1. Vendeur :</strong> « Ce casque est homologué, avec visière intégrée et réglage par molette. »<br>
+      <strong>2. Cliente :</strong> « Il est beau, mais 120 €, c'est cher pour un casque. »<br>
+      <strong>3. Vendeur :</strong> « Je comprends. Si vous skiez une semaine par an pendant cinq ans, cela fait 24 € par saison pour votre sécurité. »<br>
+      <strong>4. Cliente :</strong> « Ah oui, vu comme ça… Il existe en blanc ? » <em>(elle garde le casque sur la tête et se regarde dans le miroir)</em><br>
+      <strong>5. Vendeur :</strong> « Oui, je vous l'apporte : vous préférez le blanc ou le noir ? »
+    </div>
+    <div class="questions">
+      <div class="question">
+        <span class="q-num">1</span>
+        <p>L'objection de la réplique 2 est-elle sincère ou prétexte ? Justifiez.</p>
+      </div>
+      <div class="question">
+        <span class="q-num">2</span>
+        <p>Nommez la technique utilisée par le vendeur dans la réplique 3 et vérifiez son calcul.</p>
+      </div>
+      <div class="question">
+        <span class="q-num">3</span>
+        <p>Relevez les signaux d'achat de la réplique 4 et classez-les (verbal / non verbal).</p>
+      </div>
+      <div class="question">
+        <span class="q-num">4</span>
+        <p>Nommez la technique de conclusion de la réplique 5.</p>
+      </div>
+      <div class="question">
+        <span class="q-num">5</span>
+        <p>Rédigez une autre phrase de conclusion possible en utilisant la technique de la « peau de l'ours ».</p>
+      </div>
+    </div>
+    <div class="ordre-grandeur"><strong>Ordre de grandeur :</strong> 120 € sur 5 saisons, c'est un peu plus de 20 € par saison.</div>
+    <button class="btn-corrige" onclick="toggleCorr(this)">✅ Voir la correction</button>
+    <div class="correction">
+      <div class="corr-etape">
+        <span class="c-num">1</span>
+        <p class="res">Objection sincère : la cliente donne un frein précis (le prix) tout en montrant son intérêt (« il est beau »).</p>
+      </div>
+      <div class="corr-etape">
+        <span class="c-num">2</span>
+        <code>120 ÷ 5 = 24 € par saison</code>
+        <p class="res">Technique de réponse à l'objection prix : <strong>la division</strong>. Le calcul est juste.</p>
+      </div>
+      <div class="corr-etape">
+        <span class="c-num">3</span>
+        <p class="res">Verbal : « Il existe en blanc ? » (question sur un point de détail).<br>Non verbal : elle garde le casque sur la tête et se regarde dans le miroir (attitude de propriétaire).</p>
+      </div>
+      <div class="corr-etape">
+        <span class="c-num">4</span>
+        <p class="res">L'alternative (« ou »).</p>
+      </div>
+      <div class="corr-etape">
+        <span class="c-num">5</span>
+        <p class="res">« Je vous enlève l'étiquette et je règle la molette à votre tour de tête. »</p>
+        <p class="conclu">Le vendeur agit comme si l'achat était décidé : la cliente n'a plus qu'à confirmer.</p>
+      </div>
+    </div>
+  </div>
+</details>
+
+<hr class="section-sep">
+
+<!-- ══════════════════════════════════════════════════════════
+     BLOC 3 – VENTE ADDITIONNELLE ET OMNICANAL
+══════════════════════════════════════════════════════════ -->
+<div class="bloc-titre" id="additionnelle">
+  <span class="icone">🛒</span>
+  <h2>Bloc 3 – proposer une vente additionnelle et s'adapter au parcours omnicanal</h2>
+</div>
+
+<div class="memo">
+  <div class="memo-titre">🗂 mémo notions</div>
+  <p>La <strong>vente additionnelle</strong> s'ajoute à la vente principale. Elle n'est pas obligatoire mais doit être proposée de façon systématique et adaptée au besoin du client.</p>
+  <code>Vente complémentaire = produit ou service lié au premier achat (accessoire, entretien, montage…)</code>
+  <code>Vente supplémentaire = produit ou service sans lien direct avec le premier achat</code>
+  <code>Panier moyen = chiffre d'affaires ÷ nombre de clients (ou de tickets)</code>
+  <p class="note">Objectifs : augmenter le panier moyen et le chiffre d'affaires, améliorer la satisfaction et fidéliser le client.</p>
+  <p style="margin-top:10px">Le client <strong>omnicanal</strong> passe d'un canal à l'autre (site, application, magasin, borne). L'enseigne s'adapte :</p>
+  <code>Web-to-store = du site internet vers le magasin (réservation en ligne, retrait en magasin…)</code>
+  <code>Store-to-web = du magasin vers le site (commande sur borne, livraison à domicile…)</code>
+</div>
+
+<!-- EX 11 -->
+<details class="exo-card">
+  <summary class="exo-header">
+    <span class="exo-num">Ex. 11</span>
+    <span class="badge badge-1">⬆ décollage</span>
+    <span class="exo-titre-txt">Vente complémentaire ou vente supplémentaire ?</span>
+    <span class="chevron">▼</span>
+  </summary>
+  <div class="exo-body">
+    <div class="contexte">
+      Votre responsable vous présente les propositions faites par l'équipe de vente au cours de la journée.
+    </div>
+    <table class="tableau-donnees">
+      <thead><tr><th>N°</th><th>Vente principale</th><th>Proposition du vendeur</th></tr></thead>
+      <tbody>
+        <tr><td class="num">1</td><td>Raquette de tennis</td><td>Tube de balles</td></tr>
+        <tr><td class="num">2</td><td>Raquette de tennis</td><td>Cordage sur place</td></tr>
+        <tr><td class="num">3</td><td>Chaussures de running</td><td>Sweat de la nouvelle collection</td></tr>
+        <tr><td class="num">4</td><td>Tente de camping</td><td>Tapis de sol</td></tr>
+        <tr><td class="num">5</td><td>Vélo</td><td>Casque</td></tr>
+        <tr><td class="num">6</td><td>Maillot de bain</td><td>Baskets de ville</td></tr>
+        <tr><td class="num">7</td><td>Tapis de yoga</td><td>Sac de rangement pour tapis</td></tr>
+        <tr><td class="num">8</td><td>Veste de ski</td><td>Montre connectée</td></tr>
+      </tbody>
+    </table>
+    <div class="questions">
+      <div class="question">
+        <span class="q-num">1</span>
+        <p>Indiquez s'il s'agit d'une vente complémentaire ou d'une vente supplémentaire.</p>
+      </div>
+      <div class="question">
+        <span class="q-num">2</span>
+        <p>Parmi ces propositions, laquelle est un service associé ?</p>
+      </div>
+    </div>
+    <div class="ordre-grandeur"><strong>Indice :</strong> posez-vous la question « ce produit sert-il à utiliser, protéger ou compléter le premier achat ? ». Si oui, la vente est complémentaire.</div>
+    <button class="btn-corrige" onclick="toggleCorr(this)">✅ Voir la correction</button>
+    <div class="correction">
+      <div class="corr-etape">
+        <span class="c-num">1</span>
+        <table class="tableau-corr">
+          <thead><tr><th>N°</th><th>Type</th></tr></thead>
+          <tbody>
+            <tr><td>1</td><td class="val">Complémentaire</td></tr>
+            <tr><td>2</td><td class="val">Complémentaire</td></tr>
+            <tr><td>3</td><td class="val">Supplémentaire</td></tr>
+            <tr><td>4</td><td class="val">Complémentaire</td></tr>
+            <tr><td>5</td><td class="val">Complémentaire</td></tr>
+            <tr><td>6</td><td class="val">Supplémentaire</td></tr>
+            <tr><td>7</td><td class="val">Complémentaire</td></tr>
+            <tr><td>8</td><td class="val">Supplémentaire</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <div class="corr-etape">
+        <span class="c-num">2</span>
+        <p class="res">Le cordage sur place (proposition 2).</p>
+        <p class="conclu">Un service associé (montage, cordage, réglage, livraison) est une vente complémentaire : il facilite l'utilisation du produit acheté et augmente la satisfaction du client.</p>
+      </div>
+    </div>
+  </div>
+</details>
+
+<!-- EX 12 -->
+<details class="exo-card">
+  <summary class="exo-header">
+    <span class="exo-num">Ex. 12</span>
+    <span class="badge badge-2">⬆⬆ intermédiaire</span>
+    <span class="exo-titre-txt">Proposer des ventes additionnelles adaptées</span>
+    <span class="chevron">▼</span>
+  </summary>
+  <div class="exo-body">
+    <div class="contexte">
+      Pour préparer une journée d'animation, votre responsable vous demande de compléter le tableau des propositions de ventes additionnelles.
+    </div>
+    <table class="tableau-donnees">
+      <thead><tr><th>Client</th><th>Vente principale</th></tr></thead>
+      <tbody>
+        <tr><td>Mme Durand part camper avec son conjoint.</td><td class="num">Tente 2 places</td></tr>
+        <tr><td>M. Benali commence le VTT.</td><td class="num">VTT semi-rigide</td></tr>
+        <tr><td>Mme Lopez prépare une randonnée en montagne.</td><td class="num">Chaussures de randonnée</td></tr>
+        <tr><td>Le jeune Lucas s'inscrit au club de basket.</td><td class="num">Ballon de basket</td></tr>
+        <tr><td>M. Martin inscrit sa fille au judo.</td><td class="num">Kimono</td></tr>
+      </tbody>
+    </table>
+    <div class="questions">
+      <div class="question">
+        <span class="q-num">1</span>
+        <p>Proposez, pour chaque client, une vente complémentaire et une vente supplémentaire.</p>
+      </div>
+      <div class="question">
+        <span class="q-num">2</span>
+        <p>À quel moment de l'entretien faut-il proposer la vente additionnelle ? Justifiez.</p>
+      </div>
+    </div>
+    <div class="ordre-grandeur"><strong>Indice :</strong> pensez à la sécurité, à l'entretien et au transport du produit pour la vente complémentaire.</div>
+    <button class="btn-corrige" onclick="toggleCorr(this)">✅ Voir la correction</button>
+    <div class="correction">
+      <div class="corr-etape">
+        <span class="c-num">1</span>
+        <table class="tableau-corr">
+          <thead><tr><th>Vente principale</th><th>Complémentaire (exemples)</th><th>Supplémentaire (exemples)</th></tr></thead>
+          <tbody>
+            <tr><td>Tente 2 places</td><td>tapis de sol, sacs de couchage, lampe frontale</td><td>maillot de bain, crème solaire</td></tr>
+            <tr><td>VTT semi-rigide</td><td>casque, gants, antivol, révision offerte</td><td>sac à dos de randonnée</td></tr>
+            <tr><td>Chaussures de randonnée</td><td>chaussettes de randonnée, imperméabilisant</td><td>tee-shirt de la nouvelle collection</td></tr>
+            <tr><td>Ballon de basket</td><td>pompe, sac à ballon</td><td>gourde, jogging</td></tr>
+            <tr><td>Kimono</td><td>ceinture, sac de sport</td><td>survêtement</td></tr>
+          </tbody>
+        </table>
+        <p class="conclu">Toute proposition cohérente avec le besoin du client est acceptée.</p>
+      </div>
+      <div class="corr-etape">
+        <span class="c-num">2</span>
+        <p class="res">Après l'accord du client sur la vente principale, avant le passage en caisse.</p>
+        <p class="conclu">Proposée trop tôt, la vente additionnelle peut faire hésiter le client et remettre en cause l'achat principal. Proposée après l'accord, elle complète un achat déjà décidé.</p>
+      </div>
+    </div>
+  </div>
+</details>
+
+<!-- EX 13 -->
+<details class="exo-card">
+  <summary class="exo-header">
+    <span class="exo-num">Ex. 13</span>
+    <span class="badge badge-2">⬆⬆ intermédiaire</span>
+    <span class="exo-titre-txt">Mesurer l'effet des ventes additionnelles sur le panier moyen</span>
+    <span class="chevron">▼</span>
+  </summary>
+  <div class="exo-body">
+    <div class="contexte">
+      Un samedi, le magasin <strong>SportAvenue</strong> a reçu <strong>250 clients</strong> pour un chiffre d'affaires de <strong>11 250 € TTC</strong>.<br><br>
+      Le samedi suivant, avec le même nombre de clients et les mêmes ventes principales, l'équipe propose systématiquement une vente additionnelle. <strong>40 %</strong> des clients achètent un article supplémentaire d'un montant moyen de <strong>12 € TTC</strong>.
+    </div>
+    <div class="questions">
+      <div class="question">
+        <span class="q-num">1</span>
+        <p>Calculez le panier moyen du premier samedi.</p>
+      </div>
+      <div class="question">
+        <span class="q-num">2</span>
+        <p>Calculez le nombre de clients ayant accepté la vente additionnelle et le chiffre d'affaires supplémentaire.</p>
+      </div>
+      <div class="question">
+        <span class="q-num">3</span>
+        <p>Calculez le nouveau panier moyen, puis son taux d'évolution (arrondi à 0,01 %).</p>
+      </div>
+      <div class="question">
+        <span class="q-num">4</span>
+        <p>Concluez sur l'intérêt de la vente additionnelle pour le magasin.</p>
+      </div>
+    </div>
+    <div class="ordre-grandeur"><strong>Ordre de grandeur :</strong> 100 clients × 12 € = environ 1 200 € de plus. Le panier moyen augmente de quelques euros, soit environ 10 %.</div>
+    <button class="btn-corrige" onclick="toggleCorr(this)">✅ Voir la correction</button>
+    <div class="correction">
+      <div class="corr-etape">
+        <span class="c-num">1</span>
+        <code>11 250 ÷ 250 = 45 €</code>
+        <p class="res">Panier moyen initial = <strong>45 €</strong></p>
+      </div>
+      <div class="corr-etape">
+        <span class="c-num">2</span>
+        <code>250 × 40 % = 100 clients</code>
+        <code>100 × 12 = 1 200 €</code>
+        <p class="res">CA supplémentaire = <strong>1 200 € TTC</strong></p>
+      </div>
+      <div class="corr-etape">
+        <span class="c-num">3</span>
+        <code>Nouveau CA : 11 250 + 1 200 = 12 450 €</code>
+        <code>Nouveau panier moyen : 12 450 ÷ 250 = 49,80 €</code>
+        <code>Taux d'évolution : (49,80 – 45) ÷ 45 × 100 = 10,67 %</code>
+        <p class="res">Le panier moyen passe à <strong>49,80 €</strong>, soit une hausse de <strong>10,67 %</strong>.</p>
+      </div>
+      <div class="corr-etape">
+        <span class="c-num">4</span>
+        <p class="conclu">Sans client supplémentaire, la vente additionnelle augmente le panier moyen et le chiffre d'affaires du magasin d'environ 10 %. Elle répond aussi mieux au besoin du client, ce qui favorise sa satisfaction et sa fidélité.</p>
+      </div>
+    </div>
+  </div>
+</details>
+
+<!-- EX 14 -->
+<details class="exo-card">
+  <summary class="exo-header">
+    <span class="exo-num">Ex. 14</span>
+    <span class="badge badge-2">⬆⬆ intermédiaire</span>
+    <span class="exo-titre-txt">Web-to-store ou store-to-web ?</span>
+    <span class="chevron">▼</span>
+  </summary>
+  <div class="exo-body">
+    <div class="contexte">
+      L'enseigne <strong>SportAvenue</strong> dispose d'un site marchand, d'une application, de magasins physiques et de bornes en rayon. Voici six parcours de clients.
+    </div>
+    <table class="tableau-donnees">
+      <thead><tr><th>N°</th><th>Parcours du client</th></tr></thead>
+      <tbody>
+        <tr><td class="num">1</td><td>Le client réserve en ligne une paire de chaussures et vient la retirer en magasin deux heures plus tard.</td></tr>
+        <tr><td class="num">2</td><td>La taille n'est plus en rayon : le vendeur commande l'article sur la borne et le fait livrer au domicile du client.</td></tr>
+        <tr><td class="num">3</td><td>Avant de se déplacer, la cliente vérifie sur l'application que le produit est disponible dans le magasin le plus proche.</td></tr>
+        <tr><td class="num">4</td><td>En rayon, le client scanne le QR code de l'étiquette pour lire les avis clients sur le site.</td></tr>
+        <tr><td class="num">5</td><td>La cliente reçoit un SMS l'informant que sa commande passée sur internet est arrivée en magasin.</td></tr>
+        <tr><td class="num">6</td><td>En caisse, le vendeur remet au client un code de réduction valable sur le site de l'enseigne.</td></tr>
+      </tbody>
+    </table>
+    <div class="questions">
+      <div class="question">
+        <span class="q-num">1</span>
+        <p>Classez chaque parcours en web-to-store ou store-to-web.</p>
+      </div>
+      <div class="question">
+        <span class="q-num">2</span>
+        <p>Citez deux avantages de l'omnicanal pour le client et deux pour l'enseigne.</p>
+      </div>
+    </div>
+    <div class="ordre-grandeur"><strong>Indice :</strong> regardez le point de départ du parcours. Le client part-il d'internet ou du magasin ?</div>
+    <button class="btn-corrige" onclick="toggleCorr(this)">✅ Voir la correction</button>
+    <div class="correction">
+      <div class="corr-etape">
+        <span class="c-num">1</span>
+        <table class="tableau-corr">
+          <thead><tr><th>N°</th><th>Stratégie</th></tr></thead>
+          <tbody>
+            <tr><td>1</td><td class="val">Web-to-store (retrait en magasin)</td></tr>
+            <tr><td>2</td><td class="val">Store-to-web</td></tr>
+            <tr><td>3</td><td class="val">Web-to-store</td></tr>
+            <tr><td>4</td><td class="val">Store-to-web</td></tr>
+            <tr><td>5</td><td class="val">Web-to-store</td></tr>
+            <tr><td>6</td><td class="val">Store-to-web</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <div class="corr-etape">
+        <span class="c-num">2</span>
+        <p class="res">Pour le client : gain de temps, produit disponible même en cas de rupture en rayon, choix du mode de retrait ou de livraison, accès aux avis.<br>Pour l'enseigne : éviter de perdre une vente en cas de rupture, créer du trafic en magasin, générer des ventes additionnelles lors du retrait, fidéliser le client.</p>
+      </div>
+    </div>
+  </div>
+</details>
+
+<!-- EX 15 -->
+<details class="exo-card">
+  <summary class="exo-header">
+    <span class="exo-num">Ex. 15</span>
+    <span class="badge badge-3">⬆⬆⬆ niveau examen</span>
+    <span class="exo-titre-txt">Prendre en charge un client au parcours omnicanal</span>
+    <span class="chevron">▼</span>
+  </summary>
+  <div class="exo-body">
+    <div class="contexte">
+      M. Lefèvre se présente à l'accueil de <strong>SportAvenue</strong> : « Je viens récupérer les chaussures de tennis commandées sur votre site, j'ai reçu un SMS. J'ai lu les commentaires des autres clients : apparemment le modèle taille petit… »
+    </div>
+    <div class="questions">
+      <div class="question">
+        <span class="q-num">1</span>
+        <p>Identifiez la stratégie omnicanale utilisée par le client.</p>
+      </div>
+      <div class="question">
+        <span class="q-num">2</span>
+        <p>Listez dans l'ordre les étapes de la prise en charge de ce client.</p>
+      </div>
+      <div class="question">
+        <span class="q-num">3</span>
+        <p>Rédigez ce que vous dites à M. Lefèvre pour répondre à son inquiétude.</p>
+      </div>
+      <div class="question">
+        <span class="q-num">4</span>
+        <p>Proposez une vente additionnelle adaptée et précisez son type.</p>
+      </div>
+    </div>
+    <div class="ordre-grandeur"><strong>Indice :</strong> l'inquiétude du client sur la taille est une objection sincère. Le passage en magasin permet de la lever grâce à l'essayage.</div>
+    <button class="btn-corrige" onclick="toggleCorr(this)">✅ Voir la correction</button>
+    <div class="correction">
+      <div class="corr-etape">
+        <span class="c-num">1</span>
+        <p class="res">Web-to-store : le client a commandé sur internet et retire en magasin.</p>
+      </div>
+      <div class="corr-etape">
+        <span class="c-num">2</span>
+        <p class="res">1. Accueillir le client et vérifier la commande (numéro, identité).<br>2. Proposer un essayage.<br>3. En cas de problème de taille, proposer un échange immédiat ou une autre solution (autre magasin, livraison).<br>4. Donner des conseils d'utilisation ou d'entretien.<br>5. Proposer des produits ou services complémentaires.<br>6. Prendre congé.</p>
+      </div>
+      <div class="corr-etape">
+        <span class="c-num">3</span>
+        <p class="res">« Bonjour monsieur, je vérifie votre commande. Je vous propose de les essayer tout de suite : si elles sont trop petites, nous prendrons la pointure au-dessus, sans frais. »</p>
+      </div>
+      <div class="corr-etape">
+        <span class="c-num">4</span>
+        <p class="res">Exemple : des chaussettes de tennis ou un spray imperméabilisant (vente complémentaire).</p>
+        <p class="conclu">Le retrait en magasin est une occasion de rassurer le client et de réaliser une vente additionnelle qu'un envoi à domicile ne permet pas.</p>
+      </div>
+    </div>
+  </div>
+</details>
+
+<hr class="section-sep">
+
+<!-- ══════════════════════════════════════════════════════════
+     BLOC 4 – CAS DE SYNTHÈSE
+══════════════════════════════════════════════════════════ -->
+<div class="bloc-titre" id="synthese">
+  <span class="icone">🏁</span>
+  <h2>Bloc 4 – cas de synthèse</h2>
+</div>
+
+<div class="memo">
+  <div class="memo-titre">🗂 méthode</div>
+  <code>1. Repérer les objections → sincère ou prétexte</code>
+  <code>2. Nommer la technique de réfutation (ou de réponse au prix)</code>
+  <code>3. Relever les signaux d'achat → verbal / non verbal</code>
+  <code>4. Nommer la technique de conclusion</code>
+  <code>5. Vérifier la vente additionnelle et la solution omnicanale</code>
+  <p class="note">Justifiez chaque réponse en citant la réplique concernée.</p>
+</div>
+
+<!-- EX 16 -->
+<details class="exo-card">
+  <summary class="exo-header">
+    <span class="exo-num">Ex. 16</span>
+    <span class="badge badge-exam">🏁 cas de synthèse</span>
+    <span class="exo-titre-txt">Analyser un entretien de vente complet</span>
+    <span class="chevron">▼</span>
+  </summary>
+  <div class="exo-body">
+    <div class="contexte">
+      Chez <strong>Cycl'Avenue</strong>, magasin spécialisé dans le vélo, un client cherche un vélo à assistance électrique pour aller au travail.<br><br>
+      <strong>1. Vendeur :</strong> « Ce modèle a une autonomie de 80 km et une batterie amovible. »<br>
+      <strong>2. Client :</strong> « Il est bien, mais 1 680 €, je ne pensais pas mettre autant. »<br>
+      <strong>3. Vendeur :</strong> « Je comprends. Vous l'utiliserez tous les jours : sur 3 ans, cela revient à moins de 47 € par mois. »<br>
+      <strong>4. Client :</strong> « Oui… mais j'ai peur que la batterie soit lourde à monter chez moi. »<br>
+      <strong>5. Vendeur :</strong> « Vous craignez que le poids de la batterie soit gênant, c'est bien cela ? »<br>
+      <strong>6. Client :</strong> « Oui, j'habite au troisième sans ascenseur. »<br>
+      <strong>7. Vendeur :</strong> « Elle pèse 2,8 kg et se retire en deux secondes : c'est moins lourd qu'un sac de courses. »<br>
+      <strong>8. Client :</strong> « Ah, ça va alors. » <em>(il s'assoit sur la selle et serre les poignées)</em> « Et il existe en vert ? »<br>
+      <strong>9. Vendeur :</strong> « Le vert n'est plus disponible en magasin, mais je peux vous le commander sur la borne et vous le faire livrer chez vous sous 5 jours. »<br>
+      <strong>10. Client :</strong> « Le gris me plaît aussi… Je dois quand même en parler à ma conjointe. »<br>
+      <strong>11. Vendeur :</strong> « C'est le dernier gris à votre taille et l'offre de lancement s'arrête samedi. »<br>
+      <strong>12. Client :</strong> « Bon, d'accord, je le prends en gris. »<br>
+      <strong>13. Vendeur :</strong> « Très bien. Pour vos trajets quotidiens, je vous conseille aussi un antivol en U et un casque. »
+    </div>
+    <div class="questions">
+      <div class="question">
+        <span class="q-num">1</span>
+        <p>Relevez les objections des répliques 2, 4 et 10 et classez-les (sincère / prétexte).</p>
+      </div>
+      <div class="question">
+        <span class="q-num">2</span>
+        <p>Nommez la technique utilisée par le vendeur dans les répliques 3, 5 et 7.</p>
+      </div>
+      <div class="question">
+        <span class="q-num">3</span>
+        <p>Vérifiez par le calcul l'affirmation de la réplique 3.</p>
+      </div>
+      <div class="question">
+        <span class="q-num">4</span>
+        <p>Relevez les signaux d'achat de la réplique 8 en précisant leur nature.</p>
+      </div>
+      <div class="question">
+        <span class="q-num">5</span>
+        <p>Identifiez la stratégie omnicanale proposée dans la réplique 9.</p>
+      </div>
+      <div class="question">
+        <span class="q-num">6</span>
+        <p>Nommez la technique de conclusion de la réplique 11, puis rédigez une autre conclusion utilisant l'alternative.</p>
+      </div>
+      <div class="question">
+        <span class="q-num">7</span>
+        <p>Précisez le type de vente additionnelle proposée réplique 13 et proposez une vente supplémentaire.</p>
+      </div>
+    </div>
+    <div class="ordre-grandeur"><strong>Ordre de grandeur :</strong> 3 ans = 36 mois. 1 680 ÷ 36 se situe entre 40 et 50 €.</div>
+    <button class="btn-corrige" onclick="toggleCorr(this)">✅ Voir la correction</button>
+    <div class="correction">
+      <div class="corr-etape">
+        <span class="c-num">1</span>
+        <table class="tableau-corr">
+          <thead><tr><th>Réplique</th><th>Objection</th><th>Type</th></tr></thead>
+          <tbody>
+            <tr><td>2</td><td>le prix (1 680 €)</td><td class="val">Sincère</td></tr>
+            <tr><td>4</td><td>le poids de la batterie</td><td class="val">Sincère</td></tr>
+            <tr><td>10</td><td>« je dois en parler à ma conjointe »</td><td class="val">Prétexte</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <div class="corr-etape">
+        <span class="c-num">2</span>
+        <p class="res">Réplique 3 : objection prix – <strong>division</strong>.<br>Réplique 5 : <strong>reformulation interrogative</strong>.<br>Réplique 7 : <strong>affaiblissement</strong>.</p>
+      </div>
+      <div class="corr-etape">
+        <span class="c-num">3</span>
+        <code>1 680 ÷ 36 = 46,67 €</code>
+        <p class="res">L'affirmation est juste : <strong>46,67 € par mois</strong>, soit moins de 47 €.</p>
+      </div>
+      <div class="corr-etape">
+        <span class="c-num">4</span>
+        <p class="res">Non verbal : il s'assoit sur la selle et serre les poignées (attitude de propriétaire).<br>Verbal : « Et il existe en vert ? » (question sur un point de détail).</p>
+      </div>
+      <div class="corr-etape">
+        <span class="c-num">5</span>
+        <p class="res">Store-to-web : commande en magasin sur la borne, livraison à domicile.</p>
+        <p class="conclu">Le vendeur évite de perdre la vente malgré la rupture en rayon.</p>
+      </div>
+      <div class="corr-etape">
+        <span class="c-num">6</span>
+        <p class="res">Décision immédiate (« regret »).<br>Alternative : « Vous préférez repartir aujourd'hui avec le gris, ou recevoir le vert chez vous dans 5 jours ? »</p>
+      </div>
+      <div class="corr-etape">
+        <span class="c-num">7</span>
+        <p class="res">Antivol et casque : ventes complémentaires (liées à l'utilisation du vélo).<br>Vente supplémentaire possible : un sac à dos de la nouvelle collection.</p>
+      </div>
+    </div>
+  </div>
+</details>
+
+<!-- EX 17 -->
+<details class="exo-card">
+  <summary class="exo-header">
+    <span class="exo-num">Ex. 17</span>
+    <span class="badge badge-exam">🏁 cas de synthèse</span>
+    <span class="exo-titre-txt">Repérer les erreurs d'un vendeur et proposer des améliorations</span>
+    <span class="chevron">▼</span>
+  </summary>
+  <div class="exo-body">
+    <div class="contexte">
+      Votre responsable de rayon chez <strong>SportAvenue</strong> vous transmet un échange qui s'est mal terminé au rayon running et vous demande de l'analyser par écrit.<br><br>
+      <strong>1. Cliente :</strong> « Bonjour, je cherche des chaussures pour commencer la course à pied. »<br>
+      <strong>2. Vendeur :</strong> « Celles-ci sont à 110 €. »<br>
+      <strong>3. Cliente :</strong> « 110 € ! C'est beaucoup pour débuter… »<br>
+      <strong>4. Vendeur :</strong> « C'est le prix du marché, vous savez. »<br>
+      <strong>5. Cliente :</strong> <em>(essaie les chaussures, fait quelques pas, sourit)</em> « Elles sont vraiment confortables. Vous les avez en bleu ? »<br>
+      <strong>6. Vendeur :</strong> « Non, on n'a que le noir. »<br>
+      <strong>7. Cliente :</strong> « Bon… je vais réfléchir. »<br>
+      <strong>8. Vendeur :</strong> « D'accord, au revoir. »
+    </div>
+    <div class="questions">
+      <div class="question">
+        <span class="q-num">1</span>
+        <p>Identifiez l'erreur commise par le vendeur dans chacune de ses répliques (2, 4, 6 et 8).</p>
+      </div>
+      <div class="question">
+        <span class="q-num">2</span>
+        <p>Relevez les signaux d'achat de la réplique 5.</p>
+      </div>
+      <div class="question">
+        <span class="q-num">3</span>
+        <p>Réécrivez la réplique 4 avec une technique de réponse à l'objection prix de votre choix (nommez-la).</p>
+      </div>
+      <div class="question">
+        <span class="q-num">4</span>
+        <p>Réécrivez la réplique 6 en proposant une solution omnicanale (nommez-la).</p>
+      </div>
+      <div class="question">
+        <span class="q-num">5</span>
+        <p>Réécrivez la réplique 8 en utilisant une technique de conclusion (nommez-la), puis proposez une vente additionnelle adaptée à une débutante.</p>
+      </div>
+    </div>
+    <div class="ordre-grandeur"><strong>Indice :</strong> reprenez les étapes de la vente. Le vendeur saute la découverte des besoins, l'argumentation, ne traite pas les objections et ne conclut pas.</div>
+    <button class="btn-corrige" onclick="toggleCorr(this)">✅ Voir la correction</button>
+    <div class="correction">
+      <div class="corr-etape">
+        <span class="c-num">1</span>
+        <table class="tableau-corr">
+          <thead><tr><th>Réplique</th><th>Erreur</th></tr></thead>
+          <tbody>
+            <tr><td>2</td><td>Annonce le prix d'emblée, sans découverte des besoins ni argumentation.</td></tr>
+            <tr><td>4</td><td>Ne traite pas l'objection prix, réponse fermée qui ne valorise pas le produit.</td></tr>
+            <tr><td>6</td><td>Ignore les feux verts et ne propose aucune solution à la rupture de coloris.</td></tr>
+            <tr><td>8</td><td>Accepte l'objection prétexte sans la traiter, ne conclut pas et ne propose pas de vente additionnelle.</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <div class="corr-etape">
+        <span class="c-num">2</span>
+        <p class="res">Non verbal : elle fait quelques pas et sourit (attitude de propriétaire).<br>Verbal : « Elles sont vraiment confortables » (attitude de propriétaire) et « Vous les avez en bleu ? » (point de détail).</p>
+      </div>
+      <div class="corr-etape">
+        <span class="c-num">3</span>
+        <p class="res">Exemple (addition) : « Je comprends. Pour ce prix, vous avez un amorti qui protège vos articulations, une semelle qui accroche sur route comme sur chemin et un modèle léger qui vous accompagnera toute votre progression. »</p>
+        <p class="conclu">La division ou la multiplication sont aussi acceptées si la formulation est cohérente.</p>
+      </div>
+      <div class="corr-etape">
+        <span class="c-num">4</span>
+        <p class="res">Store-to-web : « Le bleu n'est plus en rayon, mais je peux vous le commander sur la borne : vous le recevez chez vous ou au magasin sous 48 h. »</p>
+      </div>
+      <div class="corr-etape">
+        <span class="c-num">5</span>
+        <p class="res">Exemple (alternative) : « Vous préférez repartir avec le noir aujourd'hui, ou recevoir le bleu dans deux jours ? »<br>Vente additionnelle : des chaussettes de running (complémentaire).</p>
+        <p class="conclu">Avec ces corrections, le vendeur suit toutes les étapes : il lève les objections, repère les feux verts, conclut et augmente le panier moyen.</p>
+      </div>
+    </div>
+  </div>
+</details>
+
+</main>
+
+<footer class="site-footer">
+  Bac pro MCV – bloc 1 « conseiller et vendre » (E31) &nbsp;|&nbsp; 17 exercices progressifs – objections, conclusion et ventes additionnelles
+</footer>
+
+<script>
+function toggleCorr(btn) {
+  const corr = btn.nextElementSibling;
+  const isVisible = corr.classList.contains('visible');
+  corr.classList.toggle('visible', !isVisible);
+  btn.textContent = isVisible ? '✅ Voir la correction' : '🔒 Masquer la correction';
+}
+</script>
+
+</body>
+</html>
